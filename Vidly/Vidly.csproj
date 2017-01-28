@@ -208,11 +208,65 @@
     <Compile Include="Migrations\201701270754087_InitialModel.Designer.cs">
       <DependentUpon>201701270754087_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701270805557_AddIsSuscribedToCustomer.cs" />
+    <Compile Include="Migrations\201701270805557_AddIsSuscribedToCustomer.Designer.cs">
+      <DependentUpon>201701270805557_AddIsSuscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701270820430_AddMembershipType.cs" />
+    <Compile Include="Migrations\201701270820430_AddMembershipType.Designer.cs">
+      <DependentUpon>201701270820430_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701271751221_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201701271751221_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201701271751221_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701271855358_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201701271855358_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201701271855358_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272050467_RePopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201701272050467_RePopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201701272050467_RePopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272113255_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201701272113255_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201701272113255_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272114408_UpdateCurrentCustomerMembershipTypeName.cs" />
+    <Compile Include="Migrations\201701272114408_UpdateCurrentCustomerMembershipTypeName.Designer.cs">
+      <DependentUpon>201701272114408_UpdateCurrentCustomerMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272137103_AddDoBColumnToCustomerModel.cs" />
+    <Compile Include="Migrations\201701272137103_AddDoBColumnToCustomerModel.Designer.cs">
+      <DependentUpon>201701272137103_AddDoBColumnToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272138477_UpdateDobColumnsInCustomers.cs" />
+    <Compile Include="Migrations\201701272138477_UpdateDobColumnsInCustomers.Designer.cs">
+      <DependentUpon>201701272138477_UpdateDobColumnsInCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272152569_MadeDoBInCustomerNullable.cs" />
+    <Compile Include="Migrations\201701272152569_MadeDoBInCustomerNullable.Designer.cs">
+      <DependentUpon>201701272152569_MadeDoBInCustomerNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272246463_CreateGenres.cs" />
+    <Compile Include="Migrations\201701272246463_CreateGenres.Designer.cs">
+      <DependentUpon>201701272246463_CreateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272248542_UpdateDb.cs" />
+    <Compile Include="Migrations\201701272248542_UpdateDb.Designer.cs">
+      <DependentUpon>201701272248542_UpdateDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701272249380_SeedGenres.cs" />
+    <Compile Include="Migrations\201701272249380_SeedGenres.Designer.cs">
+      <DependentUpon>201701272249380_SeedGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -285,6 +339,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,6 +358,45 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201701270754087_InitialModel.resx">
       <DependentUpon>201701270754087_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701270805557_AddIsSuscribedToCustomer.resx">
+      <DependentUpon>201701270805557_AddIsSuscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701270820430_AddMembershipType.resx">
+      <DependentUpon>201701270820430_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701271751221_PopulateMembershipTypes.resx">
+      <DependentUpon>201701271751221_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701271855358_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201701271855358_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272050467_RePopulateMembershipTypes.resx">
+      <DependentUpon>201701272050467_RePopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272113255_AddNameToMembershipType.resx">
+      <DependentUpon>201701272113255_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272114408_UpdateCurrentCustomerMembershipTypeName.resx">
+      <DependentUpon>201701272114408_UpdateCurrentCustomerMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272137103_AddDoBColumnToCustomerModel.resx">
+      <DependentUpon>201701272137103_AddDoBColumnToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272138477_UpdateDobColumnsInCustomers.resx">
+      <DependentUpon>201701272138477_UpdateDobColumnsInCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272152569_MadeDoBInCustomerNullable.resx">
+      <DependentUpon>201701272152569_MadeDoBInCustomerNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272246463_CreateGenres.resx">
+      <DependentUpon>201701272246463_CreateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272248542_UpdateDb.resx">
+      <DependentUpon>201701272248542_UpdateDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701272249380_SeedGenres.resx">
+      <DependentUpon>201701272249380_SeedGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
