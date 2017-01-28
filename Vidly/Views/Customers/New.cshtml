@@ -1,0 +1,25 @@
+﻿@model Vidly.Models.Customer
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Customer</h2>
+
+@using (Html.BeginForm("Create", "Customers"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m=>m.Name)
+        @Html.TextBoxFor(m=>m.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DoB)
+        @Html.TextBoxFor(m => m.DoB, new { @class = "form-control" })
+    </div>
+    <div class="checkbox">
+        <label>
+            @Html.CheckBoxFor(m => m.IsSuscribedToNewsLetter) Subscribe to news letter?
+        </label>
+    </div>
+
+}
