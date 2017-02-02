@@ -22,5 +22,7 @@ namespace Vidly.Dtos
         [Required]
        // [Min18Member]
         public byte MembershipTypeId { get; set; }
+
+        public MembershipTypeDto MembershipType { get; set; }
     }
 }
